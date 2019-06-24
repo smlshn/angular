@@ -9,13 +9,11 @@ import { UserComponent } from '../user/user.component';
 })
 export class UserDataComponent implements OnInit {
 
-  @Input() user: UserInterface;
+  @Input() user: UserInterface = {} as UserInterface;
 
   constructor(@Optional() private parent: UserComponent) { }
 
   ngOnInit() {
-    console.log(this.parent);
-    this.parent.user = { ...this.user };
   }
 
 }
